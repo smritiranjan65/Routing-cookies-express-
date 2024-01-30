@@ -21,7 +21,7 @@ products = [
 
 router.get('/', (req,res) => {
     // setting cookies
-    res.cookie("token", "test", {maxAge: 5000});
+    res.cookie("cookiename", "this is a sone cookie from the server", {maxAge: 5000});
     res.send(products);
 });
 
