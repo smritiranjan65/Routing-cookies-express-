@@ -20,7 +20,8 @@ products = [
 ];
 
 router.get('/', (req,res) => {
-    res.cookies("token", "test");
+    // setting cookies
+    res.cookie("token", "test", {maxAge: 5000});
     res.send(products);
 });
 
