@@ -19,8 +19,10 @@ products = [
     },
 ];
 
-router.get('/', (req,res) => {
-    res.send(products);
+router.get('/:1', (req,res) => {
+    const id = res.params;
+
+    res.send(id);
 });
 
 module.exports = router
