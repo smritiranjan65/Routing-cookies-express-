@@ -19,10 +19,17 @@ products = [
     },
 ];
 
-router.get('/:1', (req,res) => {
-    const id = res.params;
-
-    res.send(id);
+router.get('/', (req,res) => {
+    res.cookies("token", "test");
+    res.send(products);
 });
+
+router.get('/:price', (req,res) => {
+    const price = req.params.price;
+    product = products.find((p) => p.price== price)
+    res.send(product);
+});
+
+
 
 module.exports = router
