@@ -28,5 +28,9 @@ mongoose.schema({
     married: {
         type: Boolean,
         required: true
+    },
+    date: {
+        type: Date,
+        default: Date.now
     }
 })
