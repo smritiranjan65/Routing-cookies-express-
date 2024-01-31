@@ -40,16 +40,65 @@ empSchema = new mongoose.Schema({
     })
 employee = new mongoose.model('employee' , empSchema)
 
-createEmp = new employee(
+creatE1 = new employee(
     {
-        name : "Dams" ,
-        mobile : 9546219901 ,
-        age : 16 , 
-        salary : 55000 ,
-        married : true
-
+        name: "Siddhant Raj",
+        mobile: 8541011179,
+        age: 20,
+        salary: 40000,
+        married: true
     }
-);
-        
-createEmp.save();
-console.log("data gaya");
+)
+
+creatE2 = new employee(
+    {
+        name: "Amit patel",
+        mobile: 574264726,
+        age: 10,
+        salary: 10000,
+        married: false
+    }
+)
+
+creatE3 = new employee(
+    {
+        name: "hasmukh",
+        mobile: 9113368190,
+        age: 19,
+        salary: 70000,
+        married: true
+    }
+)
+
+creatE4 = new employee(
+    {
+        name: "Damodar",
+        mobile: 70165351,
+        age: 22,
+        salary: 60000,
+        married: false
+    }
+)
+
+empD = employee.insertMany([creatE1,creatE2,creatE3,creatE4]);
+console.log(empD);
+
+
+
+
+// sync way
+//createEmp = new employee(
+//    {
+//        name : "Smriti" ,
+//        mobile : 7367016351,
+//        age : 21 , 
+//        salary : 30000 ,
+//        married : false
+//
+//    }
+//);
+//        
+//createEmp.save();
+//console.log("data gaya");
+
+
