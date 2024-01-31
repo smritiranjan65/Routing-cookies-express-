@@ -40,48 +40,61 @@ empSchema = new mongoose.Schema({
     })
 employee = new mongoose.model('employee' , empSchema)
 
-creatE1 = new employee(
-    {
-        name: "Siddhant Raj",
-        mobile: 8541011179,
-        age: 20,
-        salary: 40000,
-        married: true
+readData = async() => {
+    try{
+        data = await employee.find({ married: true});
+        console.log(data);
     }
-)
-
-creatE2 = new employee(
+    catch(error)
     {
-        name: "Amit patel",
-        mobile: 574264726,
-        age: 10,
-        salary: 10000,
-        married: false
+        console.log(error);
     }
-)
+}
 
-creatE3 = new employee(
-    {
-        name: "hasmukh",
-        mobile: 9113368190,
-        age: 19,
-        salary: 70000,
-        married: true
-    }
-)
+readData();
 
-creatE4 = new employee(
-    {
-        name: "Damodar",
-        mobile: 70165351,
-        age: 22,
-        salary: 60000,
-        married: false
-    }
-)
-
-empD = employee.insertMany([creatE1,creatE2,creatE3,creatE4]);
-console.log(empD);
+//creatE1 = new employee(
+//    {
+//        name: "Siddhant Raj",
+//        mobile: 8541011179,
+//        age: 20,
+//        salary: 40000,
+//        married: true
+//    }
+//)
+//
+//creatE2 = new employee(
+//    {
+//        name: "Amit",
+//        mobile: 574264726,
+//        age: 10,
+//        salary: 10000,
+//        married: false
+//    }
+//)
+//
+//creatE3 = new employee(
+//    {
+//        name: "hasmukh",
+//        mobile: 9113368190,
+//        age: 19,
+//        salary: 70000,
+//        married: true
+//    }
+//)
+//
+//creatE4 = new employee(
+//    {
+//        name: "Damodar",
+//        mobile: 70165351,
+//        age: 22,
+//        salary: 60000,
+//        married: false
+//    }
+//)
+//
+//empD = employee.insertMany([creatE1,creatE2,//creatE3,creatE4]);
+//console.log(empD);
 
 
 
