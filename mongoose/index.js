@@ -36,3 +36,14 @@ empSchema = mongoose.schema({
 }) 
 
 employee = new mongoose.model('employee', empSchema)
+
+createEmp = new employee(
+    {
+        name: 'Smriti ranjan',
+        mobile: 7367016351,
+        age: 21,
+        salary: 30000,
+        married: false,
+    })
+
+createEmp.save();
