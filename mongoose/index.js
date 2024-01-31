@@ -42,7 +42,7 @@ employee = new mongoose.model('employee' , empSchema)
 
 readData = async() => {
     try{
-       data = await employee.find({ married: true}).select({ mobile:0}).limit(6).sort({salary: -1});
+       data = await employee.find({ married: true}).select({ mobile:0}).limit(6).sort({salary: -1 });
        //data = await employee.findOne()
         console.log(data);
     }
