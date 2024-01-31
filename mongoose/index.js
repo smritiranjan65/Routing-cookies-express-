@@ -24,5 +24,9 @@ mongoose.schema({
     salary: {
         type: Number,
         required: true
+    },
+    married: {
+        type: Boolean,
+        required: true
     }
 })
